@@ -1,0 +1,46 @@
+1.NGER
+
+class Solution:
+    def nextLargerElement(self,arr,n):
+        stack = []
+        result = [-1] * n
+        
+        for i in range(n):
+            while stack and arr[i] > arr[stack[-1]]:
+                result[stack.pop()] = arr[i]
+            stack.append(i)
+            
+        return result
+2.NGEL 
+class Solution:
+    def nextLargerElement(self, arr, n):
+        stack = []
+        result= [-1] * n
+        for i in range(n):
+            while stack and arr[i] > arr[stack[-1]]:
+                result[stack.pop()] = arr[i]
+            stack.append(i)
+         return result
+        
+3.NSER
+class Solution:
+    def nextSmallerElement(self, arr, n):
+        stack = []
+        result= [-1] * n
+        for i in range(n):
+            while stack and arr[i] < arr[stack[-1]]:
+                    [stack.pop()] = arr[i]
+            stack.append(i)
+         return result
+4.NSEL
+        
+class Solution:
+    def nextSmallerElement(self, arr, n):
+        stack = []
+        result=[-1]*n
+        for i in range(n-1, -1, -1):
+            while stack and arr[i] < arr[stack[-1]]:
+                result[stack.pop()] = arr[i]
+            stack.append(i)
+        
+        return result
